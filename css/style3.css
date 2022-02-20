@@ -16,6 +16,7 @@ body{
     top: 0;
     cursor: pointer;
     z-index: 1;
+   
 }
 .nav-list{
 width:70%;
@@ -103,7 +104,7 @@ font-family: 'Ubuntu', sans-serif;
     margin: 0;
     padding: 0;
     font-weight: 600;
-    color: #fff;
+    color: #fff
 }
 .timeline ul li p{
     margin: 10px 0 0;
@@ -265,3 +266,4 @@ content:'\f16d';
 .sci li:nth-child(4) a span:after{
     background: #e4405f;
 }
+
