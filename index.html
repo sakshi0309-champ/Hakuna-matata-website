@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hakuna-matata</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style1.css" />
+    <style type="text/css">
+        .circle {
+            width: 20px;
+            height: 20px;
+            border: 1px solid #000;
+            position: absolute;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="menu">
+                <h3 class="logo">HAKUNA-<span>MATATA</span></h3>
+                <div class="hamburger-menu">
+                    <div class="bar"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-container">
+            <div class="main">
+                <header>
+                    <div class="overlay">
+                        <div class="inner">
+                            <h2 class="title">Fun is here , otherwise nowhere</h2>
+                            <p>
+                                Are you looking for thrill and excitement?....
+                                hey! you got the right place : ) 
+                            </p>
+                            <button class="btn">Go ahead</button>
+                        </div>
+                    </div>
+                </header>
+            </div>
+
+            <div class="shadow one"></div>
+            <div class="shadow two"></div>
+        </div>
+
+        <div class="links">
+            <ul>
+                <li>
+                    <a href="/" style="--i: 0.05s;">Home<span class="sr-only">(current)</span></a>
+                </li>
+
+                <li>
+                    <a href="/activity.html" style="--i: 0.1s;">Explore</a>
+                </li>
+                <li>
+                    <a href="/gallary.html" style="--i: 0.15s;">Gallary</a>
+                </li>
+                <li>
+                    <a href="/timeline.html" style="--i: 0.20s;">Events</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <ul class="sci">
+            <li><a href="#"><span></span></a></li>
+            <li><a href="#"><span></span></a></li>
+            <li><a href="#"><span></span></a></li>
+            <li><a href="#"><span></span></a></li>
+        </ul>
+    </footer>
+
+    <script src="app.js"></script>
+    <script type="text/javascript">
+
+        document.onmousemove = animateCircles;
+
+        var colors = ['#ccc', '#6cf', '#eba13a'];
+
+        function animateCircles(event) {
+            let circle = document.createElement("div");
+            circle.setAttribute("class", "circle");
+            document.body.appendChild(circle);
+
+            circle.style.left = event.clientX + 'px';
+            circle.style.top = event.clientY + 'px';
+
+            var color = colors[Math.floor(Math.random() * colors.length)];
+            circle.style.borderColor = color;
+
+            circle.style.transition = "all 0.5s linear 0s";
+
+            circle.style.left = circle.offsetLeft - 20 + 'px';
+            circle.style.top = circle.offsetTop - 20 + 'px';
+
+            circle.style.width = "50px";
+            circle.style.height = "50px";
+            circle.style.borderWidth = "5px";
+            circle.style.opacity = 0;
+
+            setTimeout(function () {
+                circle.remove();
+            }, 500);
+        }
+
+
+    </script>
+</body>
+
+</html>
